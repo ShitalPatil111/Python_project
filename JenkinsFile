@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ShitalPatil111/Python_project.git']])
+            }
+        }
+        stage('Build') {
+            steps {
+                
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Python program is executing successfully...."
+            }
+        }
+    }
+}
