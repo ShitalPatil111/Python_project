@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                
+                git branch: 'main', url: 'https://github.com/ShitalPatil111/Python_project.git'
+                bat 'python atm.py'
             }
         }
         stage('Test') {
